@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  background-color: #0a2848;
+  background-image: url("images\mietbc.jpeg");
   height: 100vh;
   display: flex;
   align-items: center;
@@ -28,10 +28,10 @@ main {
 /* chatbot elements */
 
 .chatbot-container {
-  background-color: white;
+  background-color: whitesmoke;
   width: 560px;
   min-height: 460px;
-  border: 2px solid #586e88;
+  border: 2px solid black;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -56,13 +56,7 @@ main {
 
 .logo {
   grid-area: logo;
-  width: 45px;
-}
-
-.supportId {
-  font-size: 10px;
-  grid-area: supportId;
-  text-align: center;
+  width: 65px;
 }
 
 .clear-btn {
@@ -70,14 +64,15 @@ main {
   height: 20px;
   padding: 0;
   width: 80%;
-  border: 2px solid blue;
   font-size: 12px;
   margin: 0 auto;
+  border: 2px solid black;
+  color: black;
 }
 
 .clear-btn:hover {
-  border: 3px solid blue;
-  color: blue;
+  border: 3px solid #242897;
+  color: #242897;
   cursor: pointer;
 }
 
@@ -149,13 +144,14 @@ input[type="text"] {
 .send-btn-icon {
   width: 25px;
   display: block;
+  cursor: pointer;
 }
 
 /* text */
 
 h1 {
   font-size: 15px;
-  color: var(--light-text);
+  color: black;
   grid-area: title;
 }
 

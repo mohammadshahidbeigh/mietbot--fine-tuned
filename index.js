@@ -81,7 +81,7 @@ function renderTypewriterText(text) {
 document.getElementById("clear-btn").addEventListener("click", () => {
   remove(conversationInDb);
   chatbotConversation.innerHTML =
-    '<div class="speech speech-ai">How can I help you?</div>';
+    '<div class="speech speech-ai">How can I assist you today?</div>';
 });
 
 function renderConversationFromDb() {
