@@ -66,13 +66,13 @@ main {
   width: 80%;
   font-size: 12px;
   margin: 0 auto;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
 }
 
 .clear-btn:hover {
-  border: 3px solid #242897;
-  color: #242897;
+  border: 3px solid #3b82f6;
+  color: #3b82f6;
   cursor: pointer;
 }
 
@@ -111,7 +111,7 @@ main {
 }
 
 .speech-human {
-  background: #242897;
+  background: #3b82f6;
   border-top-right-radius: 0;
 }
 

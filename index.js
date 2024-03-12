@@ -49,7 +49,7 @@ function fetchReply() {
       const conversationArr = Object.values(snapshot.val());
       conversationArr.unshift(instructionObj);
       const chatCompletion = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "ft:gpt-3.5-turbo-0125:personal:mietbot:91BRWEUv",
         messages: conversationArr,
         presence_penalty: 0,
         frequency_penalty: 0.3,
