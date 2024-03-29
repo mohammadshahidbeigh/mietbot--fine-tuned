@@ -167,9 +167,9 @@ h2 {
   text-transform: uppercase;
 }
 
-/* The cursor */
+/* The cursor used */
 
-@keyframes cursor-blink {
+@keyframes cursor-blink { 
   0% {
     opacity: 0;
   }
@@ -182,5 +182,5 @@ h2 {
   content: "|";
   font-weight: 700;
   display: inline-block;
-  animation: cursor-blink 0.5s steps(2) infinite;
+  animation: cursor-blink 0.5s steps(2) infinite; 
 }
