@@ -35,11 +35,10 @@ main {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 1em;
 }
 
 .chatbot-container > * {
-  padding: 0.5em;
+  padding: 1.8em;
 }
 
 .chatbot-header {
@@ -48,6 +47,7 @@ main {
     "logo . ."
     "logo title supportId"
     "logo subtitle clear-btn";
+  background-color: #3b82f6;
 }
 
 .chatbot-header > * {
@@ -56,7 +56,7 @@ main {
 
 .logo {
   grid-area: logo;
-  width: 65px;
+  width: 70px;
 }
 
 .clear-btn {
@@ -66,20 +66,20 @@ main {
   width: 80%;
   font-size: 12px;
   margin: 0 auto;
-  border: 2px solid #3b82f6;
-  color: #3b82f6;
+  border: 2px solid black;
+  color: black;
 }
 
 .clear-btn:hover {
-  border: 3px solid #3b82f6;
-  color: #3b82f6;
+  border: 3px solid whitesmoke;
+  color: white;
   cursor: pointer;
 }
 
 .chatbot-conversation {
-  height: 350px;
+  height: 400px;
   overflow-y: scroll;
-  margin: 1em 0;
+  margin: 0em 0;
 }
 
 /* stop ugly scroll bar on some browsers */
@@ -155,7 +155,7 @@ input[type="text"] {
 /* text */
 
 h1 {
-  font-size: 15px;
+  font-size: 18px;
   color: black;
   grid-area: title;
 }
@@ -166,7 +166,7 @@ p {
 }
 
 h2 {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   grid-area: subtitle;
   text-transform: uppercase;
