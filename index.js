@@ -5,8 +5,8 @@ import OpenAI from "openai";
 import { process } from "./env";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // This is also the default, can be omitted
-  dangerouslyAllowBrowser: true, // For Frontend Usage
+  apiKey: process.env.OPENAI_API_KEY, 
+  dangerouslyAllowBrowser: true, // For Frontend Usage/Can be omitted.
 });
 
 const appSettings = {
