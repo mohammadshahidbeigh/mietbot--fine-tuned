@@ -14,11 +14,11 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 main {
-  background-image: url("images/mietbc.jpeg");
+  background-image: url("images/miet-bg.jpeg");
   height: 100vh;
   display: flex;
   align-items: center;
@@ -31,8 +31,8 @@ main {
   background-color: whitesmoke;
   width: 560px;
   min-height: 460px;
-  border: 2px solid black;
-  border-radius: 25px;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 1em;
@@ -76,29 +76,28 @@ main {
   cursor: pointer;
 }
 
-.chatbot-conversation-container {
-  max-height: 350px;
-  min-height: 350px;
+.chatbot-conversation {
+  height: 350px;
   overflow-y: scroll;
   margin: 1em 0;
 }
 
 /* stop ugly scroll bar on some browsers */
-.chatbot-conversation-container::-webkit-scrollbar {
+.chatbot-conversation::-webkit-scrollbar {
   display: none;
 }
 
-.chatbot-conversation-container::-moz-scrollbar {
+.chatbot-conversation::-moz-scrollbar {
   display: none;
 }
 
 .speech {
   padding: 1em;
-  margin: 1em auto;
-  max-width: 260px;
+  max-width: 240px;
   color: var(--light-text);
-  min-width: 100%;
+  min-width: 96%;
   border-radius: var(--border-rad-lg);
+  font-size: 1.08em;
 }
 
 .speech:first-child {
@@ -108,9 +107,11 @@ main {
 .speech-ai {
   background: black;
   border-top-left-radius: 0;
+  margin: 1.2em 1em 0 0;
 }
 
 .speech-human {
+  margin: 1.2em 0 0 1em;
   background: #3b82f6;
   border-top-right-radius: 0;
 }
@@ -122,11 +123,15 @@ main {
 input[type="text"],
 button {
   background-color: transparent;
-  border: 1px solid var(--medium-light-text);
+  border: 1px solid #3b82f6;
   border-radius: 15px;
   padding: 1em;
 }
 
+input[type="text"]:focus,
+button:focus {
+  outline: none;
+}
 input[type="text"] {
   color: black;
   width: 100%;
@@ -167,9 +172,9 @@ h2 {
   text-transform: uppercase;
 }
 
-/* The cursor used */
+/* The cursor */
 
-@keyframes cursor-blink { 
+@keyframes cursor-blink {
   0% {
     opacity: 0;
   }
@@ -182,5 +187,5 @@ h2 {
   content: "|";
   font-weight: 700;
   display: inline-block;
-  animation: cursor-blink 0.5s steps(2) infinite; 
+  animation: cursor-blink 0.5s steps(2) infinite;
 }

@@ -5,7 +5,7 @@ import OpenAI from "openai";
 import { process } from "./env";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, 
+  apiKey: process.env.OPENAI_API_KEY,
   dangerouslyAllowBrowser: true, // For Frontend Usage/Can be omitted.
 });
 
@@ -24,7 +24,7 @@ const chatbotConversation = document.getElementById("chatbot-conversation");
 const instructionObj = {
   role: "system",
   content:
-    "Given your question about the Model Institute of Engineering and Technology (MIET Jammu), provide relevant information on topics such as admission procedures, course details, and campus facilities.). For questions unrelated to MIET Jammu, respond with 'I'm sorry, I don't have that information.",
+    "You are a supportive and dynamic conversational bot, designed to address any inquiries about MIET Jammu with the utmost precision. Your role involves analyzing the context and conversation history to provide the most accurate response. If the information needed to address the query isn't given in the context or conversation history, it's crucial to admit, I'm sorry, I cannot provide a definitive answer to that. At this point, kindly guide the user to reach out to info@mietjammu.in for further assistance. Remember to avoid fabricating responses. Always keep your tone friendly, approachable, and informative.",
 };
 
 document.addEventListener("submit", (e) => {
@@ -81,7 +81,7 @@ function renderTypewriterText(text) {
 document.getElementById("clear-btn").addEventListener("click", () => {
   remove(conversationInDb);
   chatbotConversation.innerHTML =
-    '<div class="speech speech-ai">Hey there! Welcome to the MIET, Jammu Virtual Assistant. <br/>How can I help you today?</div>';
+    '<div class="speech speech-ai">Hey there! Welcome to MIET Jammu\'s virtual assistant.<br> How can I assist you today?</div>';
 });
 
 function renderConversationFromDb() {
