@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  background-image: url("images\mietbc.jpeg");
+  background-image: url("images/mietbc.jpeg");
   height: 100vh;
   display: flex;
   align-items: center;

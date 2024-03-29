@@ -10,8 +10,7 @@ const openai = new OpenAI({
 });
 
 const appSettings = {
-  databaseURL:
-    "https://mietbot-49caf-default-rtdb.asia-southeast1.firebasedatabase.app/", //  Your Firebase Realtime Database URL
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
 };
 
 const app = initializeApp(appSettings);
@@ -24,7 +23,8 @@ const chatbotConversation = document.getElementById("chatbot-conversation");
 
 const instructionObj = {
   role: "system",
-  content: "You are a helpful assistant.",
+  content:
+    "Given your question about the Model Institute of Engineering and Technology (MIET Jammu), provide relevant information on topics such as admission procedures, course details, and campus facilities.). For questions unrelated to MIET Jammu, respond with 'I'm sorry, I don't have that information.",
 };
 
 document.addEventListener("submit", (e) => {
@@ -49,7 +49,7 @@ function fetchReply() {
       const conversationArr = Object.values(snapshot.val());
       conversationArr.unshift(instructionObj);
       const chatCompletion = await openai.chat.completions.create({
-        model: "ft:gpt-3.5-turbo-0125:personal:mietbot:91BRWEUv",
+        model: "ft:gpt-3.5-turbo-0125:personal:mietbot:95WIrcrK",
         messages: conversationArr,
         presence_penalty: 0,
         frequency_penalty: 0.3,
@@ -81,7 +81,7 @@ function renderTypewriterText(text) {
 document.getElementById("clear-btn").addEventListener("click", () => {
   remove(conversationInDb);
   chatbotConversation.innerHTML =
-    '<div class="speech speech-ai">How can I assist you today?</div>';
+    '<div class="speech speech-ai">Hey there! Welcome to the MIET, Jammu Virtual Assistant. <br/>How can I help you today?</div>';
 });
 
 function renderConversationFromDb() {
